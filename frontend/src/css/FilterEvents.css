@@ -1,0 +1,334 @@
+.filter-event-content ::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #438011;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.filter-events-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: #161924;
+}
+
+.filter-event-header {
+  border-radius: 10px;
+  border: 1.5px solid #438011;
+  background-color: rgba(217, 217, 217, 0);
+  max-width: 100%;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 900;
+  padding: 10px 30px;
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-event-title {
+  font-family: Orbitron, sans-serif;
+  margin: 10px !important;
+}
+
+.filter-event-title .upcoming {
+  color: #ffffff;
+}
+
+.filter-event-title .events {
+  background: linear-gradient(90deg, #66d82e 60.81%, #367218 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.filter-event-content {
+  border-radius: 13px;
+  background-color: rgba(38, 38, 38, 0.5);
+  border: 1.5px solid #438011;
+  margin-top: 40px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1180px;
+  /* min-height: 300; */
+  min-height: 300px;
+  /* max-height: 300px; */
+  display: flex;
+  gap: 20px;
+  overflow-y: auto;
+  /* animation: zoomInOut 2.9s ease-in-out infinite; */
+}
+
+.filter-event-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-event-image-column {
+  flex: 1;
+  max-width: 25%;
+  /* background-color: #006400; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* text-align: center; */
+}
+
+.filter-event-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  /* text-align: center; */
+}
+
+.filter-event-details-column {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  text-align: left;
+  overflow: hidden;
+}
+
+.filter-event-details {
+  color: #fff;
+}
+
+.filter-event-description {
+  font-family: 'Cascadia Code', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-height: 220px; /* Sets a max height */
+  overflow-y: auto; /* Adds scroll if content exceeds max-height */
+  flex-grow: 1;
+  /* max-width: 90%; */
+}
+
+.filter-event-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.filter-register-btn {
+  background-color: #006400;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid #006400;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 rgba(0, 255, 0, 0);
+  align-self: flex-start;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  margin-top: auto;
+  bottom: 10px;
+  left: 10px;
+}
+
+.filter-register-btn:hover {
+  border-color: #438011;
+  background-color: transparent;
+  box-shadow: 0px 0px 10px 0px rgba(0, 255, 0, 0.7);
+}
+
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px !important;
+}
+
+.category-btn {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: rgba(38, 38, 38, 0.5);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.category-btn.active {
+  color: #438011;
+}
+
+.category-btn:hover {
+  color: #fff;
+  background-color: #006400;
+}
+
+.category-btn:focus {
+  outline: none;
+}
+
+/* Define the zoom-in and zoom-out animation */
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply the animation on hover */
+.filter-event-content:hover {
+  animation: zoomInOut 1.9s ease-in-out infinite;
+}
+
+/* Responsive Styles */
+
+/* Small devices */
+@media (max-width: 576px) {
+  .filter-event-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+  .filter-event-image-column {
+    display: none;
+    /* text-align: center; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+
+  .category-btn.active {
+    /* color: #438011; */
+    /* background-color: none; */
+  }
+
+  .filter-event-details-column {
+    width: 100%;
+    text-align: left;
+  }
+  .filter-event-header {
+    font-size: 20px;
+    padding: 5px 15px;
+    text-align: center;
+  }
+  .filter-event-content {
+    margin-top: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px !important;
+    height: auto;
+  }
+  .filter-event-description {
+    font-size: 14px;
+    padding: 5px;
+  }
+  .filter-event-heading {
+    font-size: 22px;
+    padding-left: 5px;
+  }
+  .filter-register-btn {
+    width: auto;
+    text-align: left;
+    margin-left: 5px;
+  }
+  .category-btn {
+    margin: 0 6px;
+    padding: 0px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+/* Medium devices */
+@media (max-width: 768px) {
+  .filter-event-layout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .filter-event-image-column {
+    display: none;
+    /* text-align: center; */
+  }
+  .filter-event-details-column {
+    width: 100%;
+  }
+  .filter-event-header {
+    font-size: 22px;
+    padding: 8px 20px;
+  }
+  .filter-event-content {
+    margin-top: 25px;
+    padding: 18px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .filter-event-description {
+    font-size: 17px;
+  }
+  .filter-register-btn {
+    width: auto;
+    text-align: left;
+  }
+}
+
+/* Large devices */
+@media (min-width: 992px) {
+  .filter-event-header {
+    font-size: 22px;
+    padding: 5px 10px;
+  }
+  .filter-event-content {
+    margin-top: 30px;
+    padding: 20px;
+  }
+  .filter-event-description {
+    font-size: 18px;
+  }
+}
+
+/* Extra large devices */
+@media (min-width: 1200px) {
+  .filter-event-header {
+    font-size: 26px;
+    padding: 12px 30px;
+  }
+  .filter-event-content {
+    margin-top: 40px;
+    padding: 20px;
+  }
+  .filter-event-description {
+    font-size: 18px;
+  }
+}
